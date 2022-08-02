@@ -2,6 +2,8 @@
   "name": "valheim-notifier",
   "version": "0.0.1",
   "main": "index.ts",
+  "author": "Josh Wells <josh@zakini.co.uk>",
+  "license": "MIT",
   "scripts": {
     "valheim-notifier": "ts-node .",
     "lint": "tsc --noEmit && eslint . --ext js,ts,jsx,tsx",
@@ -11,8 +13,6 @@
     "build:test": "yarn bundle && pkg -t macos-arm64 dist/index.js -o dist/vnot",
     "prepare": "husky install"
   },
-  "author": "Josh Wells <josh@zakini.co.uk>",
-  "license": "MIT",
   "dependencies": {
     "@types/node": "^18.6.3",
     "axios": "^0.27.2",
