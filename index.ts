@@ -1,7 +1,12 @@
-import { ensureConfig, notifyDiscord } from './helpers'
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+import notify from './commands/notify'
+import { ensureConfig } from './helpers'
 
 const run = async () => {
-  await notifyDiscord('hello world')
+  yargs.scriptName('vnot')
+    .command(notify)
+    .parse(hideBin(process.argv))
 }
 
 const main = async () => {
